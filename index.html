@@ -1,0 +1,102 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="chrome=1">
+    <title>mdash by meritt</title>
+
+    <link rel="stylesheet" href="stylesheets/styles.css">
+    <link rel="stylesheet" href="stylesheets/pygment_trac.css">
+    <script src="javascripts/scale.fix.js"></script>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <!--[if lt IE 9]>
+    <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+  </head>
+  <body>
+    <div class="wrapper">
+      <header>
+        <h1 class="header">mdash</h1>
+        <p class="header">A Node.JS wrapper for the mdash.ru API</p>
+
+        <ul>
+          <li class="download"><a class="buttons" href="https://github.com/meritt/node-mdash/zipball/master">Download ZIP</a></li>
+          <li class="download"><a class="buttons" href="https://github.com/meritt/node-mdash/tarball/master">Download TAR</a></li>
+          <li><a class="buttons github" href="https://github.com/meritt/node-mdash">View On GitHub</a></li>
+        </ul>
+
+        <p class="header">This project is maintained by <a class="header name" href="https://github.com/meritt">meritt</a></p>
+
+
+      </header>
+      <section>
+        <h2>
+<a name="how-to-use-with-javascript" class="anchor" href="#how-to-use-with-javascript"><span class="octicon octicon-link"></span></a>How to use with JavaScript</h2>
+
+<div class="highlight highlight-javascript"><pre><span class="kd">var</span> <span class="nx">mdash</span> <span class="o">=</span> <span class="nx">require</span><span class="p">(</span><span class="s1">'mdash'</span><span class="p">);</span>
+
+<span class="kd">var</span> <span class="nx">text</span> <span class="o">=</span> <span class="s1">'"Эдиториум.ру" - сайт, созданный по материалам сборника.'</span><span class="p">;</span>
+
+<span class="nx">mdash</span><span class="p">.</span><span class="nx">apply</span><span class="p">(</span><span class="nx">text</span><span class="p">,</span> <span class="kd">function</span><span class="p">(</span><span class="nx">error</span><span class="p">,</span> <span class="nx">data</span><span class="p">)</span> <span class="p">{</span>
+  <span class="k">if</span> <span class="p">(</span><span class="nx">error</span><span class="p">)</span> <span class="p">{</span>
+    <span class="k">throw</span> <span class="k">new</span> <span class="nb">Error</span><span class="p">(</span><span class="nx">error</span><span class="p">);</span>
+  <span class="p">}</span>
+
+  <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">data</span><span class="p">);</span>
+<span class="p">});</span>
+</pre></div>
+
+<h2>
+<a name="or-with-coffeescript" class="anchor" href="#or-with-coffeescript"><span class="octicon octicon-link"></span></a>Or with CoffeeScript</h2>
+
+<div class="highlight highlight-coffeescript"><pre><span class="nv">mdash = </span><span class="nx">require</span> <span class="s">'mdash'</span>
+
+<span class="nv">text = </span><span class="s">'"Эдиториум.ру" - сайт, созданный по материалам сборника.'</span>
+
+<span class="nx">mdash</span><span class="p">.</span><span class="nx">apply</span> <span class="nx">text</span><span class="p">,</span> <span class="nf">(error, data) -&gt;</span>
+  <span class="k">throw</span> <span class="k">new</span> <span class="nb">Error</span> <span class="nx">error</span> <span class="k">if</span> <span class="nx">error</span>
+
+  <span class="nx">console</span><span class="p">.</span><span class="nx">log</span> <span class="nx">data</span>
+</pre></div>
+
+<hr><h2>
+<a name="install-with-npm" class="anchor" href="#install-with-npm"><span class="octicon octicon-link"></span></a>Install with NPM</h2>
+
+<pre><code>npm install mdash
+</code></pre>
+
+<h2>
+<a name="api" class="anchor" href="#api"><span class="octicon octicon-link"></span></a>API</h2>
+
+<ul>
+<li>apply (text, callback)</li>
+</ul><hr><h2>
+<a name="author" class="anchor" href="#author"><span class="octicon octicon-link"></span></a>Author</h2>
+
+<ul>
+<li>
+<a href="mailto:alexey@simonenko.su">Alexey Simonenko</a>, <a href="http://simonenko.su">simonenko.su</a>
+</li>
+</ul><h2>
+<a name="license" class="anchor" href="#license"><span class="octicon octicon-link"></span></a>License</h2>
+
+<p>The MIT License, see the included <code>license.md</code> file.</p>
+      </section>
+      <footer>
+        <p><small>Hosted on <a href="http://pages.github.com">GitHub Pages</a> using the Dinky theme</small></p>
+      </footer>
+    </div>
+    <!--[if !IE]><script>fixScale(document);</script><![endif]-->
+		          <script type="text/javascript">
+            var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
+            document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
+          </script>
+          <script type="text/javascript">
+            try {
+              var pageTracker = _gat._getTracker("UA-37507032-10");
+            pageTracker._trackPageview();
+            } catch(err) {}
+          </script>
+
+  </body>
+</html>
