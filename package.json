@@ -1,0 +1,22 @@
+{
+    "name": "mdash"
+  , "version": "0.0.1"
+  , "description": "Wrapper for the mdash.ru API"
+  , "keywords": ["mdash", "typography", "typograf", "api", "wrapper"]
+  , "author": "Alexey Simonenko <alexey@simonenko.su>"
+  , "homepage": "http://simonenko.su/projects/node-mdash"
+  , "main": "./lib/mdash"
+  , "repository": {
+        "type": "git"
+      , "url": "https://github.com/meritt/node-mdash.git"
+    }
+  , "engines": {
+      "node": "0.10.x"
+    }
+  , "dependencies": {
+      "request": "2.27.x"
+    }
+  , "devDependencies": {
+      "coffee-script": "1.6.x"
+  }
+}
