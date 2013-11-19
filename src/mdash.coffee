@@ -13,7 +13,7 @@ request = (params, fn = ->) ->
       data  = if body.result? then body.result else null
     catch error
       data = null
-      error = new Error 'Unable to parse JSON response from mdash.ru'
+      error = 'Unable to parse JSON response from mdash.ru'
 
     fn error, data
 
