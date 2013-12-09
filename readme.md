@@ -1,8 +1,16 @@
 # mdash
 
+[![NPM version](https://badge.fury.io/js/mdash.png)](http://badge.fury.io/js/mdash) [![Dependency Status](https://david-dm.org/meritt/node-mdash.png)](https://david-dm.org/meritt/node-mdash)
+
 A Node.JS wrapper for the [mdash.ru API](http://mdash.ru).
 
-## How to use with JavaScript
+## Installation
+
+```
+$ npm install easymongo
+```
+
+## Examples
 
 ```javascript
 var mdash = require('mdash');
@@ -18,8 +26,6 @@ mdash.apply(text, function(error, data) {
 });
 ```
 
-## Or with CoffeeScript
-
 ```coffeescript
 mdash = require 'mdash'
 
@@ -31,17 +37,9 @@ mdash.apply text, (error, data) ->
   console.log data
 ```
 
----
-
-## Install with NPM
-
-	npm install mdash
-
 ## API
 
 * apply (text, callback)
-
----
 
 ## Author
 
