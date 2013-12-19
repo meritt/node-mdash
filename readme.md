@@ -1,6 +1,6 @@
 # mdash
 
-[![NPM version](https://badge.fury.io/js/mdash.png)](http://badge.fury.io/js/mdash) [![Dependency Status](https://david-dm.org/meritt/node-mdash.png)](https://david-dm.org/meritt/node-mdash)
+[![NPM version](https://badge.fury.io/js/mdash.png)](http://badge.fury.io/js/mdash) [![Dependency Status](https://david-dm.org/meritt/node-mdash.png)](https://david-dm.org/meritt/node-mdash) [![devDependency Status](https://david-dm.org/meritt/node-mdash/dev-status.png)](https://david-dm.org/meritt/node-mdash#info=devDependencies)
 
 A Node.JS wrapper for the [mdash.ru API](http://mdash.ru).
 
