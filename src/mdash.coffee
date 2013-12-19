@@ -1,11 +1,6 @@
 xhr = require 'request'
 
-apihost = 'http://mdash.ru/api.{version}.php'
-version = 'v1'
-
-request = (params, fn = ->) ->
-  host = apihost.replace '{version}', version
-
+request = (host, params, fn = ->) ->
   xhr.post host, form: params, (error, request, body) ->
     try
       body  = JSON.parse body
@@ -13,7 +8,7 @@ request = (params, fn = ->) ->
       data  = if body.result? then body.result else null
     catch error
       data = null
-      error = 'Unable to parse JSON response from mdash.ru'
+      error = "Unable to parse JSON response from #{host}"
 
     fn error, data
 
@@ -21,7 +16,10 @@ request = (params, fn = ->) ->
   return
 
 module.exports =
+  endpoint: 'http://mdash.ru/api.v1.php'
+
   apply: (text, fn) ->
     params = text: text
-    request params, fn
+
+    request @endpoint, params, fn
     return
