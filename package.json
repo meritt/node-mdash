@@ -14,7 +14,7 @@
       "node": "0.10.x"
     }
   , "dependencies": {
-      "request": "2.27.x"
+      "request": "2.30.x"
     }
   , "devDependencies": {
       "coffee-script": "1.6.x"
