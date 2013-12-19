@@ -7,7 +7,7 @@ A Node.JS wrapper for the [mdash.ru API](http://mdash.ru).
 ## Installation
 
 ```
-$ npm install easymongo
+$ npm install mdash
 ```
 
 ## Examples
