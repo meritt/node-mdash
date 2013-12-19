@@ -39,7 +39,7 @@ mdash.apply text, (error, data) ->
 
 ## API
 
-* apply (text, callback)
+* apply (text[, options], callback)
 
 ## Author
 

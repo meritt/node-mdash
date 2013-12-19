@@ -18,8 +18,15 @@ request = (host, params, fn = ->) ->
 module.exports =
   endpoint: 'http://mdash.ru/api.v1.php'
 
-  apply: (text, fn) ->
-    params = text: text
+  apply: (text, options, fn) ->
+    params = {text}
+
+    if typeof options is 'function'
+      fn = options
+      options = null
+
+    if options
+      params.options = options
 
     request @endpoint, params, fn
     return
