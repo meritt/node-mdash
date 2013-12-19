@@ -1,8 +1,8 @@
 {
     "name": "mdash"
   , "version": "0.0.1"
-  , "description": "Wrapper for the mdash.ru API"
-  , "keywords": ["mdash", "typography", "typograf", "api", "wrapper"]
+  , "description": "Wrapper for typographer mdash (EMT, written by Evgeny Muravjev)"
+  , "keywords": ["mdash", "mdash.ru", "typography", "typograf", "typographer", "api", "wrapper"]
   , "author": "Alexey Simonenko <alexey@simonenko.su>"
   , "homepage": "http://simonenko.su/projects/node-mdash"
   , "main": "./lib/mdash"
@@ -18,5 +18,5 @@
     }
   , "devDependencies": {
       "coffee-script": "1.6.x"
-  }
+    }
 }
