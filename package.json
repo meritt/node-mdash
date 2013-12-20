@@ -19,4 +19,5 @@
   , "devDependencies": {
       "coffee-script": "1.6.x"
     }
+  , "license": "MIT"
 }
