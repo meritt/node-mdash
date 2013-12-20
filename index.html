@@ -17,7 +17,7 @@
     <div class="wrapper">
       <header>
         <h1 class="header">mdash</h1>
-        <p class="header">A Node.JS wrapper for the mdash.ru API</p>
+        <p class="header">A node.js wrapper for the EMT typographer</p>
 
         <ul>
           <li class="download"><a class="buttons" href="https://github.com/meritt/node-mdash/zipball/master">Download ZIP</a></li>
@@ -30,47 +30,137 @@
 
       </header>
       <section>
-        <h2>
-<a name="how-to-use-with-javascript" class="anchor" href="#how-to-use-with-javascript"><span class="octicon octicon-link"></span></a>How to use with JavaScript</h2>
+        <p><a href="http://badge.fury.io/js/mdash"><img src="https://badge.fury.io/js/mdash.png" alt="NPM version"></a> <a href="https://david-dm.org/meritt/node-mdash"><img src="https://david-dm.org/meritt/node-mdash.png" alt="Dependency Status"></a> <a href="https://david-dm.org/meritt/node-mdash#info=devDependencies"><img src="https://david-dm.org/meritt/node-mdash/dev-status.png" alt="devDependency Status"></a></p>
 
-<div class="highlight highlight-javascript"><pre><span class="kd">var</span> <span class="nx">mdash</span> <span class="o">=</span> <span class="nx">require</span><span class="p">(</span><span class="s1">'mdash'</span><span class="p">);</span>
+<p>A node.js wrapper for the <a href="http://mdash.ru">EMT typographer</a>, written by Evgeny Muravjev.</p>
 
-<span class="kd">var</span> <span class="nx">text</span> <span class="o">=</span> <span class="s1">'"Эдиториум.ру" - сайт, созданный по материалам сборника.'</span><span class="p">;</span>
+<h2>
+<a name="installation" class="anchor" href="#installation"><span class="octicon octicon-link"></span></a>Installation</h2>
 
-<span class="nx">mdash</span><span class="p">.</span><span class="nx">apply</span><span class="p">(</span><span class="nx">text</span><span class="p">,</span> <span class="kd">function</span><span class="p">(</span><span class="nx">error</span><span class="p">,</span> <span class="nx">data</span><span class="p">)</span> <span class="p">{</span>
+<pre><code>$ npm install mdash
+</code></pre>
+
+<h2>
+<a name="examples" class="anchor" href="#examples"><span class="octicon octicon-link"></span></a>Examples</h2>
+
+<div class="highlight highlight-js"><pre><span class="kd">var</span> <span class="nx">mdash</span> <span class="o">=</span> <span class="nx">require</span><span class="p">(</span><span class="s1">'mdash'</span><span class="p">);</span>
+
+<span class="kd">var</span> <span class="nx">text</span> <span class="o">=</span> <span class="s1">'"May the force be with you."\n"The force" is a magical power that gives people strength. This phrase is kind of a way of saying "good luck".'</span><span class="p">;</span>
+
+<span class="nx">mdash</span><span class="p">.</span><span class="nx">apply</span><span class="p">(</span><span class="nx">text</span><span class="p">,</span> <span class="kd">function</span><span class="p">(</span><span class="nx">error</span><span class="p">,</span> <span class="nx">result</span><span class="p">)</span> <span class="p">{</span>
   <span class="k">if</span> <span class="p">(</span><span class="nx">error</span><span class="p">)</span> <span class="p">{</span>
     <span class="k">throw</span> <span class="k">new</span> <span class="nb">Error</span><span class="p">(</span><span class="nx">error</span><span class="p">);</span>
   <span class="p">}</span>
 
-  <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">data</span><span class="p">);</span>
+  <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">result</span><span class="p">);</span>
 <span class="p">});</span>
 </pre></div>
 
-<h2>
-<a name="or-with-coffeescript" class="anchor" href="#or-with-coffeescript"><span class="octicon octicon-link"></span></a>Or with CoffeeScript</h2>
-
 <div class="highlight highlight-coffeescript"><pre><span class="nv">mdash = </span><span class="nx">require</span> <span class="s">'mdash'</span>
 
-<span class="nv">text = </span><span class="s">'"Эдиториум.ру" - сайт, созданный по материалам сборника.'</span>
+<span class="nv">text = </span><span class="s">'"May the force be with you."\n"The force" is a magical power that gives people strength. This phrase is kind of a way of saying "good luck".'</span>
 
-<span class="nx">mdash</span><span class="p">.</span><span class="nx">apply</span> <span class="nx">text</span><span class="p">,</span> <span class="nf">(error, data) -&gt;</span>
+<span class="nx">mdash</span><span class="p">.</span><span class="nx">apply</span> <span class="nx">text</span><span class="p">,</span> <span class="nf">(error, result) -&gt;</span>
   <span class="k">throw</span> <span class="k">new</span> <span class="nb">Error</span> <span class="nx">error</span> <span class="k">if</span> <span class="nx">error</span>
 
-  <span class="nx">console</span><span class="p">.</span><span class="nx">log</span> <span class="nx">data</span>
+  <span class="nx">console</span><span class="p">.</span><span class="nx">log</span> <span class="nx">result</span>
 </pre></div>
-
-<hr><h2>
-<a name="install-with-npm" class="anchor" href="#install-with-npm"><span class="octicon octicon-link"></span></a>Install with NPM</h2>
-
-<pre><code>npm install mdash
-</code></pre>
 
 <h2>
 <a name="api" class="anchor" href="#api"><span class="octicon octicon-link"></span></a>API</h2>
 
 <ul>
-<li>apply (text, callback)</li>
-</ul><hr><h2>
+<li>endpoint=</li>
+<li>apply (text[, options], callback)</li>
+</ul><p>By default <code>endpoint</code> set to official API (<a href="http://mdash.ru">http://mdash.ru/api.v1.php</a>), but it does not support typographer options. You can change <code>endpoint</code> to yours. For example, you can run <a href="https://github.com/meritt/mdash-service">mdash-service</a> and send all request to it.</p>
+
+<h4>
+<a name="emt-options-list" class="anchor" href="#emt-options-list"><span class="octicon octicon-link"></span></a><a href="http://mdash.ru/rules.html">EMT</a> options list:</h4>
+
+<pre><code>Quote.quotes
+Quote.quotation
+Dash.to_libo_nibud
+Dash.iz_za_pod
+Dash.ka_de_kas
+Nobr.super_nbsp
+Nobr.nbsp_in_the_end
+Nobr.phone_builder
+Nobr.ip_address
+Nobr.spaces_nobr_in_surname_abbr
+Nobr.nbsp_celcius
+Nobr.hyphen_nowrap_in_small_words
+Nobr.hyphen_nowrap
+Nobr.nowrap
+Symbol.tm_replace
+Symbol.r_sign_replace
+Symbol.copy_replace
+Symbol.apostrophe
+Symbol.degree_f
+Symbol.arrows_symbols
+Symbol.no_inches
+Punctmark.auto_comma
+Punctmark.hellip
+Punctmark.fix_pmarks
+Punctmark.fix_excl_quest_marks
+Punctmark.dot_on_end
+Number.minus_between_nums
+Number.minus_in_numbers_range
+Number.auto_times_x
+Number.simple_fraction
+Number.math_chars
+Number.thinsp_between_number_triads
+Number.thinsp_between_no_and_number
+Number.thinsp_between_sect_and_number
+Date.years
+Date.mdash_month_interval
+Date.nbsp_and_dash_month_interval
+Date.nobr_year_in_date
+Space.many_spaces_to_one
+Space.clear_percent
+Space.clear_before_after_punct
+Space.autospace_after
+Space.bracket_fix
+Abbr.nbsp_money_abbr
+Abbr.nobr_vtch_itd_itp
+Abbr.nobr_sm_im
+Abbr.nobr_acronym
+Abbr.nobr_locations
+Abbr.nobr_abbreviation
+Abbr.ps_pps
+Abbr.nbsp_org_abbr
+Abbr.nobr_gost
+Abbr.nobr_before_unit_volt
+Abbr.nbsp_before_unit
+OptAlign.all
+OptAlign.oa_oquote
+OptAlign.oa_obracket_coma
+OptAlign.layout
+Text.paragraphs
+Text.auto_links
+Text.email
+Text.breakline
+Text.no_repeat_words
+Etc.unicode_convert
+</code></pre>
+
+<p>You can enable or disable option like this:</p>
+
+<div class="highlight highlight-js"><pre><span class="kd">var</span> <span class="nx">options</span> <span class="o">=</span> <span class="p">{</span>
+  <span class="s1">'Text.paragraphs'</span><span class="o">:</span> <span class="s1">'off'</span><span class="p">,</span>
+  <span class="s1">'Text.breakline'</span><span class="o">:</span> <span class="s1">'off'</span><span class="p">,</span>
+  <span class="s1">'Etc.unicode_convert'</span><span class="o">:</span> <span class="s1">'on'</span>
+<span class="p">};</span>
+
+<span class="nx">mdash</span><span class="p">.</span><span class="nx">apply</span><span class="p">(</span><span class="nx">text</span><span class="p">,</span> <span class="nx">options</span><span class="p">,</span> <span class="kd">function</span><span class="p">(</span><span class="nx">error</span><span class="p">,</span> <span class="nx">result</span><span class="p">)</span> <span class="p">{</span>
+  <span class="k">if</span> <span class="p">(</span><span class="nx">error</span><span class="p">)</span> <span class="p">{</span>
+    <span class="k">throw</span> <span class="k">new</span> <span class="nb">Error</span><span class="p">(</span><span class="nx">error</span><span class="p">);</span>
+  <span class="p">}</span>
+
+  <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">result</span><span class="p">);</span>
+<span class="p">});</span>
+</pre></div>
+
+<h2>
 <a name="author" class="anchor" href="#author"><span class="octicon octicon-link"></span></a>Author</h2>
 
 <ul>
@@ -81,6 +171,8 @@
 <a name="license" class="anchor" href="#license"><span class="octicon octicon-link"></span></a>License</h2>
 
 <p>The MIT License, see the included <code>license.md</code> file.</p>
+
+<p><a href="https://bitdeli.com/free" title="Bitdeli Badge"><img src="https://d2weczhvl823v0.cloudfront.net/meritt/node-mdash/trend.png" alt="Bitdeli Badge"></a></p>
       </section>
       <footer>
         <p><small>Hosted on <a href="http://pages.github.com">GitHub Pages</a> using the Dinky theme</small></p>
