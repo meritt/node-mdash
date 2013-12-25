@@ -11,10 +11,10 @@
       , "url": "https://github.com/meritt/node-mdash.git"
     }
   , "engines": {
-      "node": "0.10.x"
+      "node": "~0.10"
     }
   , "dependencies": {
-      "request": "2.30.x"
+      "request": "2.x"
     }
   , "devDependencies": {
       "coffee-script": "1.6.x"
