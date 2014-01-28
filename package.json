@@ -11,13 +11,16 @@
       , "url": "https://github.com/meritt/node-mdash.git"
     }
   , "engines": {
-      "node": "~0.10"
+      "node": ">=0.10"
     }
   , "dependencies": {
       "request": "2.x"
     }
   , "devDependencies": {
-      "coffee-script": "1.6.x"
+      "coffee-script": "1.7.x"
+    }
+  , "scripts": {
+      "build": "./node_modules/.bin/coffee -c -o lib/ src/"
     }
   , "license": "MIT"
 }
