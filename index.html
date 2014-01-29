@@ -37,32 +37,40 @@
 <h2>
 <a name="installation" class="anchor" href="#installation"><span class="octicon octicon-link"></span></a>Installation</h2>
 
-<pre><code>$ npm install mdash
-</code></pre>
+<div class="highlight highlight-bash"><pre><span class="nv">$ </span>npm install mdash
+</pre></div>
 
 <h2>
 <a name="examples" class="anchor" href="#examples"><span class="octicon octicon-link"></span></a>Examples</h2>
 
+<h4>
+<a name="javascript" class="anchor" href="#javascript"><span class="octicon octicon-link"></span></a>JavaScript</h4>
+
 <div class="highlight highlight-js"><pre><span class="kd">var</span> <span class="nx">mdash</span> <span class="o">=</span> <span class="nx">require</span><span class="p">(</span><span class="s1">'mdash'</span><span class="p">);</span>
 
-<span class="kd">var</span> <span class="nx">text</span> <span class="o">=</span> <span class="s1">'"May the force be with you."\n"The force" is a magical power that gives people strength. This phrase is kind of a way of saying "good luck".'</span><span class="p">;</span>
+<span class="kd">var</span> <span class="nx">text</span> <span class="o">=</span> <span class="s1">'May "the force" be with you.\n"The force" is a magical power that gives people strength. This phrase is kind of a way of saying "good luck".'</span><span class="p">;</span>
 
 <span class="nx">mdash</span><span class="p">.</span><span class="nx">apply</span><span class="p">(</span><span class="nx">text</span><span class="p">,</span> <span class="kd">function</span><span class="p">(</span><span class="nx">error</span><span class="p">,</span> <span class="nx">result</span><span class="p">)</span> <span class="p">{</span>
   <span class="k">if</span> <span class="p">(</span><span class="nx">error</span><span class="p">)</span> <span class="p">{</span>
     <span class="k">throw</span> <span class="k">new</span> <span class="nb">Error</span><span class="p">(</span><span class="nx">error</span><span class="p">);</span>
   <span class="p">}</span>
 
+  <span class="c1">// result is a typographic text</span>
   <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">result</span><span class="p">);</span>
 <span class="p">});</span>
 </pre></div>
 
+<h4>
+<a name="coffeescript" class="anchor" href="#coffeescript"><span class="octicon octicon-link"></span></a>CoffeeScript</h4>
+
 <div class="highlight highlight-coffeescript"><pre><span class="nv">mdash = </span><span class="nx">require</span> <span class="s">'mdash'</span>
 
-<span class="nv">text = </span><span class="s">'"May the force be with you."\n"The force" is a magical power that gives people strength. This phrase is kind of a way of saying "good luck".'</span>
+<span class="nv">text = </span><span class="s">'May "the force" be with you.\n"The force" is a magical power that gives people strength. This phrase is kind of a way of saying "good luck".'</span>
 
 <span class="nx">mdash</span><span class="p">.</span><span class="nx">apply</span> <span class="nx">text</span><span class="p">,</span> <span class="nf">(error, result) -&gt;</span>
   <span class="k">throw</span> <span class="k">new</span> <span class="nb">Error</span> <span class="nx">error</span> <span class="k">if</span> <span class="nx">error</span>
 
+  <span class="c1"># result is a typographic text</span>
   <span class="nx">console</span><span class="p">.</span><span class="nx">log</span> <span class="nx">result</span>
 </pre></div>
 
@@ -72,7 +80,27 @@
 <ul>
 <li>endpoint=</li>
 <li>apply (text[, options], callback)</li>
-</ul><p>By default <code>endpoint</code> set to official API (<a href="http://mdash.ru">http://mdash.ru/api.v1.php</a>), but it does not support typographer options. You can change <code>endpoint</code> to yours. For example, you can run <a href="https://github.com/meritt/mdash-service">mdash-service</a> and send all request to it.</p>
+</ul><p>By default <code>endpoint</code> set to official API (<a href="http://mdash.ru">http://mdash.ru/api.v1.php</a>), but it does not support typographer options or multiple texts. You can change <code>endpoint</code> to yours. For example, you can run <a href="https://github.com/meritt/mdash-service">mdash-service</a> and send all request to it.</p>
+
+<h3>
+<a name="mdash-service-extras" class="anchor" href="#mdash-service-extras"><span class="octicon octicon-link"></span></a><a href="https://github.com/meritt/mdash-service">mdash-service</a> extras</h3>
+
+<p>API extras have different default options, can enable/disable options and accept not only text, but array and object of texts.</p>
+
+<div class="highlight highlight-js"><pre><span class="kd">var</span> <span class="nx">texts</span> <span class="o">=</span> <span class="p">{</span>
+  <span class="nx">title</span><span class="o">:</span> <span class="s1">'May "the force" be with you.'</span><span class="p">,</span>
+  <span class="nx">text</span><span class="o">:</span> <span class="s1">'"The force" is a magical power that gives people strength. This phrase is kind of a way of saying "good luck".'</span>
+<span class="p">};</span>
+
+<span class="nx">mdash</span><span class="p">.</span><span class="nx">apply</span><span class="p">(</span><span class="nx">texts</span><span class="p">,</span> <span class="kd">function</span><span class="p">(</span><span class="nx">error</span><span class="p">,</span> <span class="nx">result</span><span class="p">)</span> <span class="p">{</span>
+  <span class="k">if</span> <span class="p">(</span><span class="nx">error</span><span class="p">)</span> <span class="p">{</span>
+    <span class="k">throw</span> <span class="k">new</span> <span class="nb">Error</span><span class="p">(</span><span class="nx">error</span><span class="p">);</span>
+  <span class="p">}</span>
+
+  <span class="c1">// result is an object with title and text keys</span>
+  <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">result</span><span class="p">);</span>
+<span class="p">});</span>
+</pre></div>
 
 <h4>
 <a name="emt-options-list" class="anchor" href="#emt-options-list"><span class="octicon octicon-link"></span></a><a href="http://mdash.ru/rules.html">EMT</a> options list:</h4>
