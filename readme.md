@@ -6,34 +6,40 @@ A node.js wrapper for the [EMT typographer](http://mdash.ru), written by Evgeny 
 
 ## Installation
 
-```
+```bash
 $ npm install mdash
 ```
 
 ## Examples
 
+#### JavaScript
+
 ```js
 var mdash = require('mdash');
 
-var text = '"May the force be with you."\n"The force" is a magical power that gives people strength. This phrase is kind of a way of saying "good luck".';
+var text = 'May "the force" be with you.\n"The force" is a magical power that gives people strength. This phrase is kind of a way of saying "good luck".';
 
 mdash.apply(text, function(error, result) {
   if (error) {
     throw new Error(error);
   }
 
+  // result is a typographic text
   console.log(result);
 });
 ```
 
+#### CoffeeScript
+
 ```coffeescript
 mdash = require 'mdash'
 
-text = '"May the force be with you."\n"The force" is a magical power that gives people strength. This phrase is kind of a way of saying "good luck".'
+text = 'May "the force" be with you.\n"The force" is a magical power that gives people strength. This phrase is kind of a way of saying "good luck".'
 
 mdash.apply text, (error, result) ->
   throw new Error error if error
 
+  # result is a typographic text
   console.log result
 ```
 
@@ -42,7 +48,27 @@ mdash.apply text, (error, result) ->
 * endpoint=
 * apply (text[, options], callback)
 
-By default `endpoint` set to official API ([http://mdash.ru/api.v1.php](http://mdash.ru)), but it does not support typographer options. You can change `endpoint` to yours. For example, you can run [mdash-service](https://github.com/meritt/mdash-service) and send all request to it.
+By default `endpoint` set to official API ([http://mdash.ru/api.v1.php](http://mdash.ru)), but it does not support typographer options or multiple texts. You can change `endpoint` to yours. For example, you can run [mdash-service](https://github.com/meritt/mdash-service) and send all request to it.
+
+### [mdash-service](https://github.com/meritt/mdash-service) extras
+
+API extras have different default options, can enable/disable options and accept not only text, but array and object of texts.
+
+```js
+var texts = {
+  title: 'May "the force" be with you.',
+  text: '"The force" is a magical power that gives people strength. This phrase is kind of a way of saying "good luck".'
+};
+
+mdash.apply(texts, function(error, result) {
+  if (error) {
+    throw new Error(error);
+  }
+
+  // result is an object with title and text keys
+  console.log(result);
+});
+```
 
 #### [EMT](http://mdash.ru/rules.html) options list:
 
