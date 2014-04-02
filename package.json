@@ -17,7 +17,7 @@
       "request": "2.x"
     }
   , "devDependencies": {
-      "coffee-script": "1.7.x"
+      "coffee-script": "~1.7.1"
     }
   , "scripts": {
       "build": "./node_modules/.bin/coffee -c -o lib/ src/"
