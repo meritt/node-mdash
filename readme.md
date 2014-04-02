@@ -1,6 +1,6 @@
 # mdash
 
-[![NPM version](https://badge.fury.io/js/mdash.png)](http://badge.fury.io/js/mdash) [![Dependency Status](https://david-dm.org/meritt/node-mdash.png)](https://david-dm.org/meritt/node-mdash) [![devDependency Status](https://david-dm.org/meritt/node-mdash/dev-status.png)](https://david-dm.org/meritt/node-mdash#info=devDependencies)
+[![NPM version](https://badge.fury.io/js/mdash.svg)](http://badge.fury.io/js/mdash) [![Dependency Status](https://david-dm.org/meritt/node-mdash.svg?theme=shields.io)](https://david-dm.org/meritt/node-mdash) [![devDependency Status](https://david-dm.org/meritt/node-mdash/dev-status.svg?theme=shields.io)](https://david-dm.org/meritt/node-mdash#info=devDependencies)
 
 A node.js wrapper for the [EMT typographer](http://mdash.ru), written by Evgeny Muravjev.
 
@@ -45,8 +45,8 @@ mdash.apply text, (error, result) ->
 
 ## API
 
-* endpoint=
-* apply (text[, options], callback)
+* `endpoint=`
+* `apply(text[, options], callback)`
 
 By default `endpoint` set to official API ([http://mdash.ru/api.v1.php](http://mdash.ru)), but it does not support typographer options or multiple texts. You can change `endpoint` to yours. For example, you can run [mdash-service](https://github.com/meritt/mdash-service) and send all request to it.
 
