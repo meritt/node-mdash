@@ -1,6 +1,8 @@
 # mdash
 
-[![NPM version](https://badge.fury.io/js/mdash.svg)](http://badge.fury.io/js/mdash) [![Dependency Status](https://david-dm.org/meritt/node-mdash.svg?theme=shields.io)](https://david-dm.org/meritt/node-mdash) [![devDependency Status](https://david-dm.org/meritt/node-mdash/dev-status.svg?theme=shields.io)](https://david-dm.org/meritt/node-mdash#info=devDependencies)
+[![NPM version][npm-image]][npm-url]
+[![Dependency status][dependency-image]][dependency-url]
+[![devDependency status][devdependency-image]][devdependency-url]
 
 A node.js wrapper for the [EMT typographer](http://mdash.ru), written by Evgeny Muravjev.
 
@@ -159,10 +161,15 @@ mdash.apply(text, options, function(error, result) {
 
 ## Author
 
-* [Alexey Simonenko](mailto:alexey@simonenko.su), [simonenko.su](http://simonenko.su)
+  - [Alexey Simonenko](https://github.com/meritt)
 
 ## License
 
 The MIT License, see the included `license.md` file.
 
-[![Bitdeli Badge](https://d2weczhvl823v0.cloudfront.net/meritt/node-mdash/trend.png)](https://bitdeli.com/free "Bitdeli Badge")
+[npm-image]: https://img.shields.io/npm/v/mdash.svg?style=flat
+[npm-url]: https://npmjs.org/package/mdash
+[dependency-image]: https://img.shields.io/david/meritt/node-mdash.svg?style=flat
+[dependency-url]: https://david-dm.org/meritt/node-mdash
+[devdependency-image]: https://img.shields.io/david/dev/meritt/node-mdash.svg?style=flat
+[devdependency-url]: https://david-dm.org/meritt/node-mdash#info=devDependencies
