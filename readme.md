@@ -4,7 +4,7 @@
 [![Dependency status][dependency-image]][dependency-url]
 [![devDependency status][devdependency-image]][devdependency-url]
 
-A node.js wrapper for the [EMT typographer](http://mdash.ru), written by Evgeny Muravjev.
+A node.js wrapper for the [EMT typographer](https://github.com/emuravjev/mdash), written by Evgeny Muravjev.
 
 ## Installation
 
@@ -132,6 +132,7 @@ Abbr.nbsp_before_unit
 OptAlign.all
 OptAlign.oa_oquote
 OptAlign.oa_obracket_coma
+OptAlign.oa_oquote_extra
 OptAlign.layout
 Text.paragraphs
 Text.auto_links
