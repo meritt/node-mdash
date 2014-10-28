@@ -30,9 +30,9 @@
 
       </header>
       <section>
-        <p><a href="http://badge.fury.io/js/mdash"><img src="https://badge.fury.io/js/mdash.svg" alt="NPM version"></a> <a href="https://david-dm.org/meritt/node-mdash"><img src="https://david-dm.org/meritt/node-mdash.svg?theme=shields.io" alt="Dependency Status"></a> <a href="https://david-dm.org/meritt/node-mdash#info=devDependencies"><img src="https://david-dm.org/meritt/node-mdash/dev-status.svg?theme=shields.io" alt="devDependency Status"></a></p>
+        <p><a href="https://npmjs.org/package/mdash"><img src="https://img.shields.io/npm/v/mdash.svg?style=flat" alt="NPM version"></a> <a href="https://david-dm.org/meritt/node-mdash"><img src="https://img.shields.io/david/meritt/node-mdash.svg?style=flat" alt="Dependency Status"></a> <a href="https://david-dm.org/meritt/node-mdash#info=devDependencies"><img src="https://img.shields.io/david/dev/meritt/node-mdash.svg?style=flat" alt="devDependency Status"></a></p>
 
-<p>A node.js wrapper for the <a href="http://mdash.ru">EMT typographer</a>, written by Evgeny Muravjev.</p>
+<p>A node.js wrapper for the <a href="https://github.com/emuravjev/mdash">EMT typographer</a>, written by Evgeny Muravjev.</p>
 
 <h2>
 <a name="installation" class="anchor" href="#installation"><span class="octicon octicon-link"></span></a>Installation</h2>
@@ -80,10 +80,13 @@
 <ul>
 <li><code>endpoint=</code></li>
 <li><code>apply(text[, options], callback)</code></li>
-</ul><p>By default <code>endpoint</code> set to official API (<a href="http://mdash.ru">http://mdash.ru/api.v1.php</a>), but it does not support typographer options or multiple texts. You can change <code>endpoint</code> to yours. For example, you can run <a href="https://github.com/meritt/mdash-service">mdash-service</a> and send all request to it.</p>
+</ul>
+
+<p>By default <code>endpoint</code> set to official API (<a href="http://mdash.ru">http://mdash.ru/api.v1.php</a>), but it does not support typographer options or multiple texts. You can change <code>endpoint</code> to yours. For example, you can run <a href="https://github.com/meritt/mdash-service">mdash-service</a> and send all request to it.</p>
 
 <h3>
-<a name="mdash-service-extras" class="anchor" href="#mdash-service-extras"><span class="octicon octicon-link"></span></a><a href="https://github.com/meritt/mdash-service">mdash-service</a> extras</h3>
+<a name="mdash-service-extras" class="anchor" href="#mdash-service-extras"><span class="octicon octicon-link"></span></a>
+<a href="https://github.com/meritt/mdash-service">mdash-service</a> extras</h3>
 
 <p>API extras have different default options, can enable/disable options and accept not only text, but array and object of texts.</p>
 
@@ -103,7 +106,8 @@
 </pre></div>
 
 <h4>
-<a name="emt-options-list" class="anchor" href="#emt-options-list"><span class="octicon octicon-link"></span></a><a href="http://mdash.ru/rules.html">EMT</a> options list:</h4>
+<a name="emt-options-list" class="anchor" href="#emt-options-list"><span class="octicon octicon-link"></span></a>
+<a href="http://mdash.ru/rules.html">EMT</a> options list:</h4>
 
 <pre><code>Quote.quotes
 Quote.quotation
@@ -162,6 +166,7 @@ Abbr.nbsp_before_unit
 OptAlign.all
 OptAlign.oa_oquote
 OptAlign.oa_obracket_coma
+OptAlign.oa_oquote_extra
 OptAlign.layout
 Text.paragraphs
 Text.auto_links
@@ -192,15 +197,13 @@ Etc.unicode_convert
 <a name="author" class="anchor" href="#author"><span class="octicon octicon-link"></span></a>Author</h2>
 
 <ul>
-<li>
-<a href="mailto:alexey@simonenko.su">Alexey Simonenko</a>, <a href="http://simonenko.su">simonenko.su</a>
-</li>
-</ul><h2>
+<li><a href="https://github.com/meritt">Alexey Simonenko</a></li>
+</ul>
+
+<h2>
 <a name="license" class="anchor" href="#license"><span class="octicon octicon-link"></span></a>License</h2>
 
 <p>The MIT License, see the included <code>license.md</code> file.</p>
-
-<p><a href="https://bitdeli.com/free" title="Bitdeli Badge"><img src="https://d2weczhvl823v0.cloudfront.net/meritt/node-mdash/trend.png" alt="Bitdeli Badge"></a></p>
       </section>
       <footer>
         <p><small>Hosted on <a href="http://pages.github.com">GitHub Pages</a> using the Dinky theme</small></p>
