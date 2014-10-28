@@ -17,10 +17,10 @@
       "request": "2.x"
     }
   , "devDependencies": {
-      "coffee-script": "~1.7.1"
+      "coffee-script": "~1.8.0"
     }
   , "scripts": {
-      "build": "./node_modules/.bin/coffee -c -o lib/ src/"
+      "build": "coffee -c -o lib/ src/"
     }
   , "license": "MIT"
 }
