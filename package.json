@@ -1,6 +1,6 @@
 {
     "name": "mdash"
-  , "version": "0.1.2"
+  , "version": "0.1.3"
   , "description": "Wrapper for typographer mdash (EMT, written by Evgeny Muravjev)"
   , "keywords": ["mdash", "mdash.ru", "typography", "typograf", "typographer", "api", "wrapper"]
   , "author": "Alexey Simonenko <alexey@simonenko.su>"
